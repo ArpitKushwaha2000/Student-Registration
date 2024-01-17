@@ -1,0 +1,94 @@
+<div class="container mt-4 text-center box" id="a1">
+  <h1 id="h1">Student Registation</h1>
+  <div class="card">
+    <form>
+      <div class="form-group">
+        <label id="h2">Student Name</label>
+        <input
+          type="text"
+          [(ngModel)]="studentname"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="studentname"
+          name="studentname"
+          placeholder="Enter Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label id="h3">Address</label>
+        <input
+          type="text"
+          [(ngModel)]="studentaddress"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="studentaddress"
+          name="studentaddress"
+          placeholder="Enter Address"
+        />
+      </div>
+
+      <div class="form-group">
+        <label id="h4">Mobile</label>
+        <input
+          type="text"
+          [(ngModel)]="mobile"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="mobile"
+          name="text"
+          placeholder="Enter Mobile"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary btn-sm mt-2 mb-2"
+        (click)="save()"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<div>
+  <div class="container mt-4 text-center box" id="a2">
+    <h1 id="h5">Student Table</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th id="m" scope="col">Name</th>
+          <th id="m" scope="col">Address</th>
+          <th id="m" scope="col">Mobile</th>
+          <th id="m" scope="col ">Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let StudentItem of StudentArray">
+          <td>{{ StudentItem.studentname }}</td>
+          <td>{{ StudentItem.studentaddress }}</td>
+          <td>{{ StudentItem.mobile }}</td>
+
+          <td>
+            <button
+              type="button"
+              class="btn btn-success btn-sm"
+              (click)="setUpdate(StudentItem)"
+            >
+              Edit
+            </button>
+            <button
+              id="b"
+              type="button"
+              class="btn btn-danger btn-sm"
+              (click)="setDelete(StudentItem)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

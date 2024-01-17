@@ -1,0 +1,48 @@
+#h1 {
+    background-color: hsl(50, 100%, 50%);
+    color: #110953;
+
+}
+
+#h2 {
+
+    color: blue;
+}
+
+#h3 {
+
+    color: blue;
+}
+
+#h4 {
+
+    color: blue;
+}
+
+#h5 {
+    background-color: hsl(50, 100%, 50%);
+    color: #110953;
+}
+
+#a1 {
+    border: 2px solid hsl(0, 56%, 4%);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#a2 {
+    border: 2px solid hsl(0, 56%, 4%);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#b {
+    margin-left: .5rem;
+}
+
+#m {
+    background-color: white;
+    color: blue;
+}
